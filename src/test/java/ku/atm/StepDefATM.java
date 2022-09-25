@@ -70,4 +70,11 @@ public class StepDefATM {
                      bank.getCustomer(id).getAccount().getBalance());
     }
 
+    //ฝากเงิน
+    @When("I deposited {double}  in my account")
+    public void i_deposited_in_my_account(double deposit){
+        atm.deposit(deposit); ///ฝากเงินเข้า
+//        System.out.println(atm.getBalance());
+    }
+
 }
